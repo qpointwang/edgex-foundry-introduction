@@ -8,6 +8,7 @@ EdgeX可以根据需要和指示将数据“北”，“南”或横向发送。
 
 ### EdgeX Foundry构建原则
 EdgeX Foundry构思了以下的原则来指导整体的架构：<br>
+
 **EdgeX Foundry与平台无关**
 * 硬件
 * 操作系统（Linux，Windows等）
@@ -27,3 +28,13 @@ EdgeX Foundry构思了以下的原则来指导整体的架构：<br>
 
 **EdgeX Foundry必须支持棕色和绿色设备/传感器现场部署**
 **EdgeX Foundry必须安全且易于管理**
+
+### EdgeX Foundry服务层
+EdgeX Foundry是一个开源微服务的集合。 这些微服务被组织成4个服务层，以及2个基础增强系统服务。服务层从物理领域的边缘从设备服务层遍历到导出服务层的信息领域的边缘，核心服务层位于中心。
+
+EdgeX Foundry的4个服务层如下：
+
+* Core Services Layer
+* Supporting Services Layer
+* Export Services Layer
+* Device Services Layer
