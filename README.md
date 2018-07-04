@@ -7,6 +7,9 @@ EdgeX Foundry 理解过程
 EdgeX可以根据需要和指示将数据“北”，“南”或横向发送。<br>
 
 #### EdgeX Foundry构建原则
-EdgeX Foundry构思了以下的原则来指导整体的架构：
+EdgeX Foundry构思了以下的原则来指导整体的架构：<br>
 **EdgeX Foundry与平台无关**
 * 硬件
+* 操作系统（Linux，Windows等）
+* 分发 - 它必须允许通过边缘，网关，雾，云等微服务分发功能
+* 协议和传感器无关
