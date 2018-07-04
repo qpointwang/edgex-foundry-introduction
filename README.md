@@ -38,3 +38,10 @@ EdgeX Foundry的4个服务层如下：
 * Supporting Services Layer
 * Export Services Layer
 * Device Services Layer
+
+EdgeX Foundry的2个基础系统服务如下：
+
+* Security
+* System Management
+
+![]https://wiki.edgexfoundry.org/download/attachments/328046/EXF_Platform%20Architecture.png?version=1&modificationDate=1493522943000&api=v2
