@@ -89,3 +89,17 @@ EdgeX Foundry的2个基础系统服务如下：
 > ###### Data Model
 > 下图显示了核心数据的数据模型。
 ![image](https://github.com/qpointwang/EdgeX-Foundry-Introduction/blob/master/Pic/FuseAlpha-DataModels-10-17-16-core%20data%20model.png)
+
+
+
+
+
+
+> ###### Metadata
+>> Metadata微服务具有关于设备和传感器的知识以及如何与其他服务（例如核心数据，命令等）使用它们进行通信。
+
+>> 具体而言，Metadata具有以下能力：
+
+>> * 管理有关连接到EdgeX Foundry并由其运营的设备和传感器的信息
+>> * 了解设备和传感器报告的数据类型和组织
+>> * 知道如何命令设备和传感器
