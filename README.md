@@ -88,3 +88,4 @@ EdgeX Foundry的2个基础系统服务如下：
 
 > ###### Data Model
 > 下图显示了核心数据的数据模型。
+![image](https://github.com/qpointwang/EdgeX-Foundry-Introduction/blob/master/Pic/FuseAlpha-DataModels-10-17-16-core%20data%20model.png)
