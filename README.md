@@ -44,4 +44,4 @@ EdgeX Foundry的2个基础系统服务如下：
 * Security
 * System Management
 
-![]https://wiki.edgexfoundry.org/download/attachments/328046/EXF_Platform%20Architecture.png?version=1&modificationDate=1493522943000&api=v2
+![image](https://github.com/qpointwang/EdgeX-Foundry-Introduction/blob/master/Pic/EXF_Platform%20Architecture.png)
