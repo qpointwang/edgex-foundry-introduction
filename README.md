@@ -45,3 +45,18 @@ EdgeX Foundry的2个基础系统服务如下：
 * System Management
 
 ![image](https://github.com/qpointwang/EdgeX-Foundry-Introduction/blob/master/Pic/EXF_Platform%20Architecture.png)
+
+#### Core Services Layer
+核心服务（CS）层将边缘处的北侧和南侧层分开。 核心服务包括以下组件：
+
+* 核心数据：从南侧对象收集的数据的持久性存储库和相关的管理服务。
+* 命令：处理北向应用发往南向设备的请求。
+* 元数据：有关连接到EdgeX Foundry的对象的元数据的存储库和关联管理服务。 提供配置新设备并将其与其拥有的设备服务配对的功能。
+* Registry and Config：为其他EdgeX Foundry微服务提供有关EdgeX Foundry和微服务配置属性（即初始化值存储库）中相关服务的信息。
+
+此时EdgeX Foundry核心服务层包括以下微服务：
+
+* Architecture--Core Services--Configuration and Registry
+* Architecture--Core Services--Core Data
+* Architecture--Core Services--Metadata
+* Architecture--Core Services--Command
