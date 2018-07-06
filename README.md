@@ -143,17 +143,17 @@ EdgeX Foundry提供了一个设备服务软件开发工具包（SDK），用于�
 
 此时EdgeX Foundry DS层包括以下微服务：
 
-* Architecture--Device Services--Virtual Device
+* [Architecture--Device Services--Virtual Device](https://wiki.edgexfoundry.org/display/FA/Architecture--Device+Services--Virtual+Device)
 
 API详细信息和代码示例可在以下页面中找到:
 
-* APIs--Device Services--Virtual Device Service
-* Provisioning a device (Modbus Example)
-* Modbus - Adding a device to EdgeX
-* SNMP - Adding a device to EdgeX
-* EdgeX Demonstration API Walk Through
-* Device Service Profiles Examples
-* MQTT Device Service - How to use, configure, and where to customize
+* [APIs--Device Services--Virtual Device Service](https://wiki.edgexfoundry.org/display/FA/APIs--Device+Services--Virtual+Device+Service)
+* [Provisioning a device (Modbus Example)](https://wiki.edgexfoundry.org/pages/viewpage.action?pageId=7602686)
+* [Modbus - Adding a device to EdgeX](https://wiki.edgexfoundry.org/display/FA/Modbus+-+Adding+a+device+to+EdgeX)
+* [SNMP - Adding a device to EdgeX](https://wiki.edgexfoundry.org/display/FA/SNMP+-+Adding+a+device+to+EdgeX)
+* [EdgeX Demonstration API Walk Through](https://wiki.edgexfoundry.org/display/FA/EdgeX+Demonstration+API+Walk+Through)
+* [Device Service Profiles Examples](https://wiki.edgexfoundry.org/display/FA/Device+Service+Profiles+Examples)
+* [MQTT Device Service - How to use, configure, and where to customize](https://wiki.edgexfoundry.org/display/FA/MQTT+Device+Service+-+How+to+use%2C+configure%2C+and+where+to+customize)
 
 Examples of Device Services
 
