@@ -175,6 +175,9 @@ Examples of Device Services
 
 
 
-#### Architecture--Device Services--Device Profile
+#### **Architecture--Device Services--Architecture of the SDK**
+![image](https://github.com/qpointwang/EdgeX-Foundry-Introduction/blob/master/Pic/DeviceServiceComponents%20from%20TYLER.PNG)
+
+#### **Architecture--Device Services--Device Profile**
 ![image](https://github.com/qpointwang/EdgeX-Foundry-Introduction/blob/master/Pic/DeviceProfileModel%20from%20TYLER.png)
 设备服务设备配置文件框图显示了设备配置文件对象类。
