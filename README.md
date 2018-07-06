@@ -140,3 +140,23 @@ DS可以一次为一个或多个设备（传感器，执行器等）提供服务
 DS层的微服务通过每个IoT对象的本地协议与设备，传感器，执行器和其他物联网对象进行通信。DS层将IoT对象生成和传递的数据转换为通用EdgeX Foundry数据结构，并将转换后的数据发送到Core Services层，以及EdgeX Foundry其他层中的其他微服务。
 
 EdgeX Foundry提供了一个设备服务软件开发工具包（SDK），用于生成设备服务的shell。它使新设备服务的创建更容易，并为核心服务层提供连接代码。
+
+此时EdgeX Foundry DS层包括以下微服务：
+
+* Architecture--Device Services--Virtual Device
+
+API详细信息和代码示例可在以下页面中找到:
+
+* APIs--Device Services--Virtual Device Service
+* Provisioning a device (Modbus Example)
+* Modbus - Adding a device to EdgeX
+* SNMP - Adding a device to EdgeX
+* EdgeX Demonstration API Walk Through
+* Device Service Profiles Examples
+* MQTT Device Service - How to use, configure, and where to customize
+
+Examples of Device Services
+
+1.BACNet DS将BACNet设备提供的温度和湿度读数转换为通用的EdgeX Foundry对象数据结构。
+2.DS接收并转换来自其他EdgeX Foundry服务或企业系统的命令，并将这些请求传递给设备，以便以设备理解的编程语言进行激活。
+3.DS可能会收到关闭Modbus PLC控制电机的请求。DS会将通用EdgeX Foundry“关闭”请求转换为Modbus串行命令，PLC控制电机可以通过该命令进行驱动。
