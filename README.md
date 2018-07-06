@@ -171,3 +171,10 @@ Examples of Device Services
 **设备服务设计**
 
 序列图概述了每个要求的对象和过程。
+
+
+
+
+#### Architecture--Device Services--Device Profile
+![image](https://github.com/qpointwang/EdgeX-Foundry-Introduction/blob/master/Pic/DeviceProfileModel%20from%20TYLER.png)
+设备服务设备配置文件框图显示了设备配置文件对象类。
