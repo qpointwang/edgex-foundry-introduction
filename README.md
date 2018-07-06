@@ -157,6 +157,6 @@ API详细信息和代码示例可在以下页面中找到:
 
 Examples of Device Services
 
-1.BACNet DS将BACNet设备提供的温度和湿度读数转换为通用的EdgeX Foundry对象数据结构。
-2.DS接收并转换来自其他EdgeX Foundry服务或企业系统的命令，并将这些请求传递给设备，以便以设备理解的编程语言进行激活。
-3.DS可能会收到关闭Modbus PLC控制电机的请求。DS会将通用EdgeX Foundry“关闭”请求转换为Modbus串行命令，PLC控制电机可以通过该命令进行驱动。
+1.BACNet DS将BACNet设备提供的温度和湿度读数转换为通用的EdgeX Foundry对象数据结构。<br>
+2.DS接收并转换来自其他EdgeX Foundry服务或企业系统的命令，并将这些请求传递给设备，以便以设备理解的编程语言进行激活。<br>
+3.DS可能会收到关闭Modbus PLC控制电机的请求。DS会将通用EdgeX Foundry“关闭”请求转换为Modbus串行命令，PLC控制电机可以通过该命令进行驱动。<br>
