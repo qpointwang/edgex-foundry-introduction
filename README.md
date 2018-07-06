@@ -173,6 +173,48 @@ Examples of Device Services
 序列图概述了每个要求的对象和过程。
 
 
+#### **Architecture--Device Services--Virtual Device**
+![image]()
+
+虚拟设备服务模拟不同类型的设备，以生成核心数据微服务的Events and Readings，用户通过命令和控制微服务发送命令并获得响应。在没有任何实际设备时执行功能或性能测试的情况下，虚拟设备服务的这些特性是很有用的。
+
+虚拟设备服务依赖于核心数据和元数据微服务，核心数据和元数据微服务必须在虚拟设备服务初始化之前完全启动。在虚拟设备服务初始化过程的开始阶段，进程向核心数据和元数据微服务发送一个ping请求，以验证它们的状态，直到它们完全启动为止。在600秒之后，如果核心数据和元数据微服务还没有完全启动，初始化过程就会失败。
+
+当虚拟设备服务启动时，初始化过程将从YAML文件中加载ValueDescriptor、DeviceService和DeviceProfile的定义，并在Metadata Microservice中创建它们。有一些默认的YAML文件存在，用户可以创建自己的文件。此外，虚拟设备服务为元数据微服务提供了回调api来管理设备实例。根据DeviceProfile定义中的GET命令，在虚拟设备中有一个H2数据库(内存中)存储资源，称为“虚拟资源”。<br>
+虚拟资源例子:
+![image]()
+
+启动后，虚拟设备服务读取H2数据库，并定期将当前值作为事件发送到核心数据微服务。默认的频率是15秒，可以从配置文件中修改。虚拟资源的当前值在每个收集周期之前以随机的值重新生成，因此每个Event的Reading应该是不同的。
+
+例如：<br>
+```
+http://localhost:48082/device/56b1acf1d66f9c9762581ea4/command/56b1acedd66f9c9762581e9d/put/0 
+{
+  "enableRandomization": false,
+  "collectionFrequency": 6
+}
+```
+命令修改了H2数据库中特定虚拟资源的“ENABLE_RANDOMIZATION”和“COLLECTION_FREQUENCY”列。修改虚拟资源记录的命令ID是“56 b1acedd66f9c9762581e9d”和设备ID是“56 b1acf1d66f9c9762581ea4。”通过将“enable_random化”列修改为FALSE，虚拟资源的值将不再重新生成一个随机值。通过修改“COLLECTION_FREQUENCY”列，在下一次采集周期后，采集频率将会改变。
+可以通过http://localhost:49990/console 修改’JDBC URL’  JDBC:H2:mem:testdb，然后单击“连接”查看H2数据库。
+
+**特殊的配置**
+虚拟设备微服务包含一些独特的配置属性，下面列出了在运行虚拟设备服务之前应该调查的独特属性，以便更好地了解它在您的环境中是如何工作的:<br>
+1）用于定位设备配置文件YAML文件的路径，这个文件用于定义由设备服务管理的虚拟设备。<br>
+```
+application.device-profile-paths=./bacnet_sample_profiles,./modbus_sample_profiles
+```
+2）指向上述目录中YAML配置文件的配置设备的虚拟设备服务指示符，当设置为true时自动为每个配置文件创建一个设备。<br>
+```
+application.auto-create-device=true
+```
+3）在开发过程中，每当服务启动时，让虚拟设备服务重新启动，并使用一个干净的Metadata数据库，通常是有利的。下面的属性指示设备服务在关闭时是否应该清除数据库中的任何现有虚拟设备，以便在服务启动备份时提供干净的环境。<br>
+```
+application.auto-cleanup=true
+```
+4）虚拟设备服务的调度程序应该几秒钟从虚拟设备中收集数据。<br>
+```
+application.collection-frequency=15
+```
 
 
 #### **Architecture--Device Services--Architecture of the SDK**
