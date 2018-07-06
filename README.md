@@ -221,6 +221,20 @@ application.collection-frequency=15
 虚拟设备服务采用普通的MVC设计模式，将逻辑分为不同的层。
 ![image](https://github.com/qpointwang/EdgeX-Foundry-Introduction/blob/master/Pic/image2016-10-21%2016_45_8.png)
 
+* Interface Layer - 与其他微服务交互
+> Controllers提供RESTful API。该实现位于org.edgexfoundry.device.virtual.controller包中。
+> Scheduled Collection Tasks是一组定期执行的异步任务，它们是为每个虚拟资源（GET命令）创建的。有关详细实现，请参阅org.edgexfoundry.device.virtual.scheduling包。此外，org.edgexfoundry.device.virtual.scheduling.Scheduler从Meta Data Micro Service读取Schedule和ScheduleEvent并安排收集任务。
+> 任务执行逻辑位于org.edgexfoundry.device.virtual.service.impl.CollectionTaskExecutorImpl中，任务创建行为位于org.edgexfoundry.device.virtual.service.impl.VirtualResourceManagerImpl.createDefaultRecords（）中。
+
+* Service Layer - 处理业务逻辑，例如，执行收集任务和命令，管理配置文件和设备等。
+> 有关更多详细信息，请参阅org.edgexfoundry.device.virtual.service.impl包。
+
+* DAO Layer - 处理协议访问。
+> 对于虚拟设备服务，org.edgexfoundry.device.virtual.dao包中的Spring Data JPA接口。
+> Spring框架将处理访问H2 DB的通信工作。
+
+* Data Layer - 用于模拟设备资源的H2 DB。
+
 
 #### **Architecture--Device Services--Architecture of the SDK**
 ![image](https://github.com/qpointwang/EdgeX-Foundry-Introduction/blob/master/Pic/DeviceServiceComponents%20from%20TYLER.PNG)
