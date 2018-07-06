@@ -182,7 +182,7 @@ Examples of Device Services
 
 当虚拟设备服务启动时，初始化过程将从YAML文件中加载ValueDescriptor、DeviceService和DeviceProfile的定义，并在Metadata Microservice中创建它们。有一些默认的YAML文件存在，用户可以创建自己的文件。此外，虚拟设备服务为元数据微服务提供了回调api来管理设备实例。根据DeviceProfile定义中的GET命令，在虚拟设备中有一个H2数据库(内存中)存储资源，称为“虚拟资源”。<br>
 虚拟资源例子:
-![image]()
+![image](https://github.com/qpointwang/EdgeX-Foundry-Introduction/blob/master/Pic/image2016-3-1%2021_14_37.png)
 
 启动后，虚拟设备服务读取H2数据库，并定期将当前值作为事件发送到核心数据微服务。默认的频率是15秒，可以从配置文件中修改。虚拟资源的当前值在每个收集周期之前以随机的值重新生成，因此每个Event的Reading应该是不同的。
 
@@ -215,6 +215,11 @@ application.auto-cleanup=true
 ```
 application.collection-frequency=15
 ```
+
+**系统架构**
+
+虚拟设备服务采用普通的MVC设计模式，将逻辑分为不同的层。
+![image](https://github.com/qpointwang/EdgeX-Foundry-Introduction/blob/master/Pic/image2016-10-21%2016_45_8.png)
 
 
 #### **Architecture--Device Services--Architecture of the SDK**
