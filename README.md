@@ -230,7 +230,7 @@ application.collection-frequency=15
 > 有关更多详细信息，请参阅org.edgexfoundry.device.virtual.service.impl包。
 
 * DAO Layer - 处理协议访问。
-> 对于虚拟设备服务，org.edgexfoundry.device.virtual.dao包中的Spring Data JPA接口。
+> 对于虚拟设备服务，org.edgexfoundry.device.virtual.dao包中的Spring Data JPA接口。<br>
 > Spring框架将处理访问H2 DB的通信工作。
 
 * Data Layer - 用于模拟设备资源的H2 DB。
