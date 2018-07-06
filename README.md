@@ -129,7 +129,9 @@ EdgeX Foundry的2个基础系统服务如下：
 
 
 
-### Device Services Layer  
+### Device Services Layer 
+
+![image](https://github.com/qpointwang/EdgeX-Foundry-Introduction/blob/master/Pic/EXF_Platform%20Architecture.png)
 
 设备服务层与设备服务交互。
 
@@ -160,3 +162,12 @@ Examples of Device Services
 1.BACNet DS将BACNet设备提供的温度和湿度读数转换为通用的EdgeX Foundry对象数据结构。<br>
 2.DS接收并转换来自其他EdgeX Foundry服务或企业系统的命令，并将这些请求传递给设备，以便以设备理解的编程语言进行激活。<br>
 3.DS可能会收到关闭Modbus PLC控制电机的请求。DS会将通用EdgeX Foundry“关闭”请求转换为Modbus串行命令，PLC控制电机可以通过该命令进行驱动。<br>
+
+
+**设备服务要求**
+
+下面提供了设备服务的要求。这些要求用于定义需要通过任何Device Service SDK提供的功能来生成设备服务脚手架代码。 它们还可以帮助读者理解设备服务的职责和角色。DS-SDK-Requirements-v3.xlsx
+
+**设备服务设计**
+
+序列图概述了每个要求的对象和过程。
