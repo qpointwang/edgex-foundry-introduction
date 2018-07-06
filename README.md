@@ -174,7 +174,7 @@ Examples of Device Services
 
 
 #### **Architecture--Device Services--Virtual Device**
-![image]()
+![image](https://github.com/qpointwang/EdgeX-Foundry-Introduction/blob/master/Pic/Drawing1-layers--virtual.png)
 
 虚拟设备服务模拟不同类型的设备，以生成核心数据微服务的Events and Readings，用户通过命令和控制微服务发送命令并获得响应。在没有任何实际设备时执行功能或性能测试的情况下，虚拟设备服务的这些特性是很有用的。
 
