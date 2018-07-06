@@ -131,7 +131,7 @@ EdgeX Foundry的2个基础系统服务如下：
 
 ### Device Services Layer 
 
-![image](https://github.com/qpointwang/EdgeX-Foundry-Introduction/blob/master/Pic/EXF_Platform%20Architecture.png)
+![image](https://github.com/qpointwang/EdgeX-Foundry-Introduction/blob/master/Pic/EXF_Platform%20Architecture--Layer--Device%20Services.png)
 
 设备服务层与设备服务交互。
 
