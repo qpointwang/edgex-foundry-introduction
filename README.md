@@ -1,4 +1,4 @@
-# EdgeX-Foundry-Introduction
+# [EdgeX-Foundry-Introduction](https://wiki.edgexfoundry.org/display/FA/Introduction+to+EdgeX+Foundry)
 EdgeX Foundry 理解过程
 
 ### Definitions: "South Side" and "North Side"
