@@ -246,7 +246,7 @@ application.collection-frequency=15
 
 
 
-edgex-go 安装ZeroMQ　on Linux　　[链接](https://wiki.edgexfoundry.org/display/FA/Introduction+to+EdgeX+Foundry)(墙内打不开，下面是这个网页的内容)
+edgex-go 安装ZeroMQ on Linux [链接](https://wiki.edgexfoundry.org/display/FA/Introduction+to+EdgeX+Foundry)(墙内打不开，下面是这个网页的内容)
 ```
 #!/usr/bin/bash
 
