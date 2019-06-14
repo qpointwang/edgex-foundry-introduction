@@ -242,3 +242,40 @@ application.collection-frequency=15
 #### **Architecture--Device Services--Device Profile**
 ![image](https://github.com/qpointwang/EdgeX-Foundry-Introduction/blob/master/Pic/DeviceProfileModel%20from%20TYLER.png)
 设备服务设备配置文件框图显示了设备配置文件对象类。
+
+
+
+
+edgex-go 安装ZeroMQ　on Linux　　[链接](https://wiki.edgexfoundry.org/display/FA/Introduction+to+EdgeX+Foundry)(墙内打不开，下面是这个网页的内容)
+
+#!/usr/bin/bash
+
+# Download zeromq
+# Ref http://zeromq.org/intro:get-the-software
+wget https://github.com/zeromq/libzmq/releases/download/v4.2.2/zeromq-4.2.2.tar.gz
+
+# Unpack tarball package
+tar xvzf zeromq-4.2.2.tar.gz
+
+# Install dependency
+sudo apt-get update && \
+sudo apt-get install -y libtool pkg-config build-essential autoconf automake uuid-dev
+
+# Create make file
+cd zeromq-4.2.2
+./configure
+
+# Build and install(root permission only)
+sudo make install
+
+# Install zeromq driver on linux
+sudo ldconfig
+
+# Check installed
+ldconfig -p | grep zmq
+
+# Expected
+############################################################
+# libzmq.so.5 (libc6,x86-64) => /usr/local/lib/libzmq.so.5
+# libzmq.so (libc6,x86-64) => /usr/local/lib/libzmq.so
+############################################################
