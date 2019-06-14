@@ -247,7 +247,7 @@ application.collection-frequency=15
 
 
 edgex-go 安装ZeroMQ　on Linux　　[链接](https://wiki.edgexfoundry.org/display/FA/Introduction+to+EdgeX+Foundry)(墙内打不开，下面是这个网页的内容)
-
+```
 #!/usr/bin/bash
 
 # Download zeromq
@@ -279,3 +279,4 @@ ldconfig -p | grep zmq
 # libzmq.so.5 (libc6,x86-64) => /usr/local/lib/libzmq.so.5
 # libzmq.so (libc6,x86-64) => /usr/local/lib/libzmq.so
 ############################################################
+```
